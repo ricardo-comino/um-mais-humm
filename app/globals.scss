@@ -1,0 +1,199 @@
+$primary-color: #51a6dd;
+$secondary-color: #0d7cc4;
+$disabled-color: rgba(0,0,0,0.2);
+$text-back: #000000;
+$text-white: #ffffff;
+$background-color: #f0f0f0;
+
+body {
+  color: $text-back;
+  background: $background-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  h1 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .p-12 {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+
+    &.white {
+      color: $text-white;
+    }
+  }
+
+  .p-24 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+
+    &.white {
+      color: $text-white;
+    }
+
+    &.center {
+      text-align: center;
+    }
+  }
+
+  .primaryButton {
+    display: flex;
+    max-width: 348px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: $primary-color;
+    color: $text-white;
+    border-radius: 12px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+
+    &:disabled {
+      background-color: $disabled-color;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    width: calc(100% - 48px);
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    display: flex;
+    background: $primary-color;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 1;
+
+    .wrap-icons {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+    }
+  }
+
+  .header {
+    position: relative;
+    height: 64px;
+    display: flex;
+    background: $primary-color;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+
+    .wrap-icons {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+    }
+
+    .nav {
+      position: absolute;
+      right: 0;
+      top: 64px;
+      z-index: 1000;
+      visibility: hidden;
+      max-width: 232px;
+      width: calc(100% - 48px);
+      background: $primary-color;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 24px;
+      height: calc(100vh - 192px);
+
+      &.show {
+        visibility: visible;
+      }
+
+      .link {
+        display: flex;
+        justify-content: space-between;
+        color: $text-white;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+
+        .icon-menu {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  .main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: calc(100% - 48px);
+    max-width: 1140px;
+    padding: 24px;
+    margin: 0 auto;
+  }
+
+  .loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: $primary-color;
+    margin: 0;
+    padding: 0;
+    color: $text-white;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+
+    .wrap-loading {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      width: calc(100% - 48px);
+      max-width: 320px;
+      padding: 0 24px;
+    }
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
