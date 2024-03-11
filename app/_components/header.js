@@ -21,11 +21,11 @@ const Header = () => {
         <Image
           src={!toggle ? Menu : CloseMenu}
           alt="Menu"
-          width={48}
-          height={48}
+          width={36}
+          height={36}
           onClick={() => setToggle(!toggle)}
         />
-        <Image src={Account} alt="Minha conta" width={48} height={48} />
+        <Image src={Account} alt="Minha conta" width={36} height={36} />
       </div>
       <Navigation toggle={toggle} />
     </div>

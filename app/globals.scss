@@ -1,6 +1,6 @@
 $primary-color: #51a6dd;
 $secondary-color: #0d7cc4;
-$disabled-color: rgba(0,0,0,0.2);
+$disabled-color: rgba(0, 0, 0, 0.2);
 $text-back: #000000;
 $text-white: #ffffff;
 $background-color: #f0f0f0;
@@ -72,17 +72,14 @@ body {
   }
 
   .footer {
-    position: absolute;
+    position: relative;
     width: calc(100% - 48px);
-    left: 0;
-    bottom: 0;
     height: 80px;
     display: flex;
     background: $primary-color;
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
-    z-index: 1;
 
     .wrap-icons {
       position: relative;
@@ -133,7 +130,7 @@ body {
         display: flex;
         justify-content: space-between;
         color: $text-white;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
         text-decoration: none;
 
@@ -158,6 +155,7 @@ body {
     max-width: 1140px;
     padding: 24px;
     margin: 0 auto;
+    min-height: calc(100vh - 192px);
   }
 
   .loading {
@@ -195,5 +193,37 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  .searchInput {
+    position: relative;
+  }
+
+  .wrapFlex {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    &.gap16 {
+      gap: 16px;
+    }
+  }
+
+  .cardExpand {
+    position: relative;
+    display: block;
+    padding: 0 !important;
+    cursor: pointer;
+
+    &.plus {
+      padding: 0 16px 24px !important;
+    }
+  }
+
+  .cardActions {
+    justify-content: space-between;
+    padding: 16px;
   }
 }

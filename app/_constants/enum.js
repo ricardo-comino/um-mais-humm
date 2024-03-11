@@ -1,0 +1,176 @@
+export const categories = [
+  {
+    id: 1,
+    name: "Ver todos",
+    status: true,
+  },
+  {
+    id: 2,
+    name: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 3,
+    name: "Experiências",
+    status: false,
+  },
+];
+
+export const subCategories = [
+  {
+    id: 1,
+    name: "Italiana",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 2,
+    name: "Carnes",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 3,
+    name: "Frutos do mar",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 4,
+    name: "Japonesa",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 5,
+    name: "Bares",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 6,
+    name: "Hambúrguer",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 7,
+    name: "Doceria",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 8,
+    name: "Pizzaria",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 9,
+    name: "Saudável",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 10,
+    name: "Brunch & Café da manhã",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 11,
+    name: "Churrascaria",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 12,
+    name: "Mexicana",
+    category: "Comer & beber",
+    status: false,
+  },
+  {
+    id: 13,
+    name: "Beleza & Estética",
+    category: "Experiências",
+    status: false,
+  },
+  {
+    id: 14,
+    name: "Esportes",
+    category: "Experiências",
+    status: false,
+  },
+  {
+    id: 15,
+    name: "Acessórios",
+    category: "Experiências",
+    status: false,
+  },
+  {
+    id: 16,
+    name: "Roupas",
+    category: "Experiências",
+    status: false,
+  },
+  {
+    id: 17,
+    name: "Diversão",
+    category: "Experiências",
+    status: false,
+  },
+  {
+    id: 18,
+    name: "Tatuagem",
+    category: "Experiências",
+    status: false,
+  },
+];
+
+export const vouchers = [
+  {
+    id: 1,
+    company: "Armazém São Caetano",
+    voucher: "2 por 1 prato principal",
+    roles: "Válido todos os dias, exceto sábado no jantar.",
+    validate: "Válido até 31/03/2025",
+    category: "Comer & beber",
+    subCategory: "Italiana",
+  },
+  {
+    id: 2,
+    company: "Botequim Carioca",
+    voucher: "2 por 1 drink",
+    roles: "Válido todos os dias, exceto sábado no jantar.",
+    validate: "Válido até 31/03/2025",
+    category: "Comer & beber",
+    subCategory: "Bares",
+  },
+  {
+    id: 3,
+    company: "Casinha 52",
+    voucher: "2 por 1 cookie",
+    roles: "Válido todos os dias, exceto sábado no jantar.",
+    validate: "Válido até 31/03/2025",
+    category: "Comer & beber",
+    subCategory: "Doceria",
+  },
+  {
+    id: 4,
+    company: "Clube Vida de Cão",
+    voucher: "2 por 1 day use",
+    roles: "Válido todos os dias, exceto sábado.",
+    validate: "Válido até 31/03/2025",
+    category: "Experiências",
+    subCategory: "Diversão",
+  },
+  {
+    id: 5,
+    company: "Use Cloe",
+    voucher: "2 por 1 bijuteria",
+    roles: "Válido todos os dias, exceto sábado no jantar.",
+    validate: "Válido até 31/03/2025",
+    category: "Experiências",
+    subCategory: "Acessórios",
+  },
+];

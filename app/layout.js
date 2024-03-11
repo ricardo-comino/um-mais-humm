@@ -1,11 +1,7 @@
-import { Suspense } from "react";
 import { Poppins } from "next/font/google";
 import "@/app/globals.scss";
 import Header from "@/app/_components/header";
 import Footer from "@/app/_components/footer";
-import Loading from "@/app/loading";
-
-export const runtime = 'edge'
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -23,11 +19,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <body className={poppins.className}>
-        <Suspense fallback={Loading}>
-          <Header />
+        <Header />
           <main className="main">{children}</main>
-          <Footer />
-        </Suspense>
+        <Footer />
       </body>
     </html>
   );
