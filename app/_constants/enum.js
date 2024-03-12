@@ -136,6 +136,10 @@ export const vouchers = [
     validate: "Válido até 31/03/2025",
     category: "Comer & beber",
     subCategory: "Italiana",
+    slug: "armazem-sao-caetano",
+    iframeGoogleMaps:
+      "pb=!1m18!1m12!1m3!1d3655.58628936626!2d-46.571751925485174!3d-23.619165763716808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ce9883380ab%3A0xa36e17a9b88e2ff!2sR.%20Piau%C3%AD%2C%20248%20-%20Santo%20Ant%C3%B4nio%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009541-150!5e0!3m2!1spt-BR!2sbr!4v1710265893866!5m2!1spt-BR!2sbr",
+    status: true,
   },
   {
     id: 2,
@@ -145,6 +149,10 @@ export const vouchers = [
     validate: "Válido até 31/03/2025",
     category: "Comer & beber",
     subCategory: "Bares",
+    slug: "botequim-carioca",
+    iframeGoogleMaps:
+      "pb=!1m18!1m12!1m3!1d3655.58628936626!2d-46.571751925485174!3d-23.619165763716808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ce9883380ab%3A0xa36e17a9b88e2ff!2sR.%20Piau%C3%AD%2C%20248%20-%20Santo%20Ant%C3%B4nio%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009541-150!5e0!3m2!1spt-BR!2sbr!4v1710265893866!5m2!1spt-BR!2sbr",
+    status: true,
   },
   {
     id: 3,
@@ -154,6 +162,10 @@ export const vouchers = [
     validate: "Válido até 31/03/2025",
     category: "Comer & beber",
     subCategory: "Doceria",
+    slug: "casinha-52",
+    iframeGoogleMaps:
+      "pb=!1m18!1m12!1m3!1d3655.58628936626!2d-46.571751925485174!3d-23.619165763716808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ce9883380ab%3A0xa36e17a9b88e2ff!2sR.%20Piau%C3%AD%2C%20248%20-%20Santo%20Ant%C3%B4nio%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009541-150!5e0!3m2!1spt-BR!2sbr!4v1710265893866!5m2!1spt-BR!2sbr",
+    status: true,
   },
   {
     id: 4,
@@ -163,6 +175,10 @@ export const vouchers = [
     validate: "Válido até 31/03/2025",
     category: "Experiências",
     subCategory: "Diversão",
+    slug: "clube-vida-de-cao",
+    iframeGoogleMaps:
+      "pb=!1m18!1m12!1m3!1d3655.58628936626!2d-46.571751925485174!3d-23.619165763716808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ce9883380ab%3A0xa36e17a9b88e2ff!2sR.%20Piau%C3%AD%2C%20248%20-%20Santo%20Ant%C3%B4nio%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009541-150!5e0!3m2!1spt-BR!2sbr!4v1710265893866!5m2!1spt-BR!2sbr",
+    status: false,
   },
   {
     id: 5,
@@ -172,5 +188,8 @@ export const vouchers = [
     validate: "Válido até 31/03/2025",
     category: "Experiências",
     subCategory: "Acessórios",
+    slug: "use-cloe",
+    iframeGoogleMaps: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.58628936626!2d-46.571751925485174!3d-23.619165763716808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ce9883380ab%3A0xa36e17a9b88e2ff!2sR.%20Piau%C3%AD%2C%20248%20-%20Santo%20Ant%C3%B4nio%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009541-150!5e0!3m2!1spt-BR!2sbr!4v1710265893866!5m2!1spt-BR!2sbr" frameborder="0" allowfullscreen loading="lazy"></iframe>`,
+    status: true,
   },
 ];
