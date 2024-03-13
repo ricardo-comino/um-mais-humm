@@ -28,6 +28,13 @@ body {
     }
   }
 
+  .p-14 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+  }
+
   .p-18 {
     font-size: 18px;
     font-weight: 600;
@@ -260,6 +267,20 @@ body {
     justify-content: space-between;
     padding: 0 16px 16px;
     width: calc(100% - 32px);
+
+    &.color {
+      background-color: $primary-color;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    &.color > a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      padding-top: 16px;
+    }
   }
 
   .contentFlex {

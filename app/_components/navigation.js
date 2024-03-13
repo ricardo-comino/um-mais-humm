@@ -25,7 +25,7 @@ const Navigation = ({ toggle }) => {
         Comprar
         <Image src={Shop} alt="Icone Comprar" className="icon-menu" />
       </Link>
-      <Link href="/localizacoes" className="link">
+      <Link href="https://maps.app.goo.gl/toEpo5uZyCRMe92i6" target="_blank" className="link">
         Localizações
         <Image src={Location} alt="Icone Localizações" className="icon-menu" />
       </Link>

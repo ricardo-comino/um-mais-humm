@@ -193,3 +193,18 @@ export const vouchers = [
     status: true,
   },
 ];
+
+export const editions = [
+  {
+    id: 1,
+    name: "Digital",
+    slug: "digital",
+    status: true,
+  },
+  {
+    id: 2,
+    name: "Físico",
+    slug: "fisico",
+    status: true,
+  },
+];

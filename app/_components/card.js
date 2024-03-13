@@ -11,19 +11,41 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import ShareIcon from "@mui/icons-material/Share";
 import imgCard from "@/public/img_304x304.jpg";
+import imgDigital from "@/public/img_digital.jpg";
+import imgFisico from "@/public/img_fisico.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import { shareVoucher } from "./utils";
 import ButtonCTA from "@/app/_components/button";
 
-export const CardCustom = ({ obj }) => {
+export const CardCustom = ({ obj, type }) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
-  return (
+  return type === "destaque" ? (
+    <Card
+      sx={{
+        maxWidth: 246,
+        borderRadius: "8px",
+        opacity: obj.status ? "1" : "0.2",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 0,
+      }}
+    >
+      <Image src={obj.name === "Digital" ? imgDigital : imgFisico} alt="Imagem do voucher" />
+      <CardActions className="cardActions color">
+        <Link href={`/`} className="p-18 white center">
+          {obj.name}
+        </Link>
+      </CardActions>
+    </Card>
+  ) : (
     <Card
       sx={{
         maxWidth: 345,
@@ -54,7 +76,7 @@ export const CardCustom = ({ obj }) => {
         title={obj.company}
         subheader={obj.validate}
       />
-      <Image src={imgCard} alt="Imagem do voucher" />
+      <Image src={imgCard} alt="Imagem do voucher"/>
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {obj.voucher}
