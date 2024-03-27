@@ -27,7 +27,7 @@ const Header = () => {
         />
         <Image src={Account} alt="Minha conta" width={36} height={36} />
       </div>
-      <Navigation toggle={toggle} />
+      <Navigation toggle={toggle} setToggle={setToggle} />
     </div>
   );
 };

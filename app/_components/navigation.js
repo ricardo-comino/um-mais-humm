@@ -10,37 +10,45 @@ import Roles from "@/public/icon_file.svg";
 import Help from "@/public/icon_help.svg";
 import Logout from "@/public/icon_logout.svg";
 
-const Navigation = ({ toggle }) => {
+const Navigation = ({ toggle, setToggle }) => {
   return (
     <nav className={`nav ${toggle && "show"}`}>
-      <Link href="/" className="link">
+      <Link href="/" className="link" onClick={() => setToggle(false)}>
         Página inicial
         <Image src={Home} alt="Icone Página inicial" className="icon-menu" />
       </Link>
-      <Link href="/vouchers" className="link">
+      <Link href="/vouchers" className="link" onClick={() => setToggle(false)}>
         Vouchers
         <Image src={Vouchers} alt="Icone Vouchers" className="icon-menu" />
       </Link>
-      <Link href="/comprar" className="link">
+      <Link href="/comprar" className="link" onClick={() => setToggle(false)}>
         Comprar
         <Image src={Shop} alt="Icone Comprar" className="icon-menu" />
       </Link>
-      <Link href="https://maps.app.goo.gl/toEpo5uZyCRMe92i6" target="_blank" className="link">
+      <Link
+        href="https://maps.app.goo.gl/toEpo5uZyCRMe92i6"
+        target="_blank"
+        className="link"
+      >
         Localizações
         <Image src={Location} alt="Icone Localizações" className="icon-menu" />
       </Link>
-      <Link href="/regras-de-uso" className="link">
+      <Link href="/regras-de-uso" className="link" onClick={() => setToggle(false)}>
         Regras de Uso
         <Image src={Roles} alt="Icone Regras de Uso" className="icon-menu" />
       </Link>
-      <Link href="/ajuda" className="link">
+      <Link href="/ajuda" className="link" onClick={() => setToggle(false)}>
         Ajuda
         <Image src={Help} alt="Icone Ajuda" className="icon-menu" />
       </Link>
-      <Link href="/sair" className="link">
-        Sair
+      <Link href="/login" className="link" onClick={() => setToggle(false)}>
+        Entrar
         <Image src={Logout} alt="Icone Sair" className="icon-menu" />
       </Link>
+      {/* <Link href="/sair" className="link" onClick={() => setToggle(false)}>
+        Sair
+        <Image src={Logout} alt="Icone Sair" className="icon-menu" />
+      </Link> */}
       {/* <Link href="/comprar" className="link">
         Comprar
         <Image src={Shop} alt="Icone Comprar" className="icon-menu" />

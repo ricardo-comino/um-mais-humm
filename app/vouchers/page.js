@@ -85,85 +85,85 @@ export default function Page() {
 
   return (
     <>
-      <div className="searchInput">
-        <Autocomplete
-          freeSolo
-          id="search"
-          disableClearable
-          options={vouchers.map((option) => option.company)}
-          inputValue={inputValue}
-          onInputChange={(event, newInputValue) => {
-            setInputValue(newInputValue);
-            handleSearch(newInputValue);
-          }}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label="Pesquisar"
-              InputProps={{
-                ...params.InputProps,
-                type: "search",
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <SearchIcon />
-                  </InputAdornment>
-                ),
-              }}
-            />
-          )}
-        />
-      </div>
-      <h1>Estabelecimentos / Vouchers</h1>
-      <div className="wrapFlex">
-        {objCategories.map((item, index) => {
-          return (
-            <Chip
-              key={index}
-              label={item.name}
-              variant={item.status ? "standart" : "outlined"}
-              onClick={() => handleCategory(item.id, item.name)}
-              color="primary"
-            />
-          );
-        })}
-      </div>
-
-      <div className="wrapFlex">
-        {objSubCategories.map((item, index) => {
-          if (item.status) {
-            return (
-              <Chip
-                key={index}
-                size="small"
-                label={item.name}
-                variant={item.status ? "standart" : "outlined"}
-                onClick={() =>
-                  handleSubCategory(item.id, item.name, item.category, false)
-                }
-                onDelete={() =>
-                  handleSubCategory(item.id, item.name, item.category, true)
-                }
-                color="primary"
-              />
-            );
-          } else {
-            return (
-              <Chip
-                key={index}
-                size="small"
-                label={item.name}
-                variant={item.status ? "standart" : "outlined"}
-                onClick={() =>
-                  handleSubCategory(item.id, item.name, item.category, false)
-                }
-                color="primary"
-              />
-            );
-          }
-        })}
-      </div>
-
       <Suspense fallback={Loading}>
+        <div className="searchInput">
+          <Autocomplete
+            freeSolo
+            id="search"
+            disableClearable
+            options={vouchers.map((option) => option.company)}
+            inputValue={inputValue}
+            onInputChange={(event, newInputValue) => {
+              setInputValue(newInputValue);
+              handleSearch(newInputValue);
+            }}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Pesquisar"
+                InputProps={{
+                  ...params.InputProps,
+                  type: "search",
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <SearchIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            )}
+          />
+        </div>
+        <h1>Estabelecimentos / Vouchers</h1>
+        <div className="wrapFlex">
+          {objCategories.map((item, index) => {
+            return (
+              <Chip
+                key={index}
+                label={item.name}
+                variant={item.status ? "standart" : "outlined"}
+                onClick={() => handleCategory(item.id, item.name)}
+                color="primary"
+              />
+            );
+          })}
+        </div>
+
+        <div className="wrapFlex">
+          {objSubCategories.map((item, index) => {
+            if (item.status) {
+              return (
+                <Chip
+                  key={index}
+                  size="small"
+                  label={item.name}
+                  variant={item.status ? "standart" : "outlined"}
+                  onClick={() =>
+                    handleSubCategory(item.id, item.name, item.category, false)
+                  }
+                  onDelete={() =>
+                    handleSubCategory(item.id, item.name, item.category, true)
+                  }
+                  color="primary"
+                />
+              );
+            } else {
+              return (
+                <Chip
+                  key={index}
+                  size="small"
+                  label={item.name}
+                  variant={item.status ? "standart" : "outlined"}
+                  onClick={() =>
+                    handleSubCategory(item.id, item.name, item.category, false)
+                  }
+                  color="primary"
+                />
+              );
+            }
+          })}
+        </div>
+
         <div className="wrapFlex gap16">
           {objVouchers.length > 0 ? (
             objVouchers.map((voucher) => (

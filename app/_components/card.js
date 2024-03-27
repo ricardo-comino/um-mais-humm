@@ -10,9 +10,6 @@ import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import ShareIcon from "@mui/icons-material/Share";
-import imgCard from "@/public/img_304x304.jpg";
-import imgDigital from "@/public/img_digital.jpg";
-import imgFisico from "@/public/img_fisico.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import { shareVoucher } from "./utils";
@@ -38,7 +35,7 @@ export const CardCustom = ({ obj, type }) => {
         gap: 0,
       }}
     >
-      <Image src={obj.name === "Digital" ? imgDigital : imgFisico} alt="Imagem do voucher" />
+      <Image src={`/${obj.image}`} width={246} height={187} alt="Imagem da edição" />
       <CardActions className="cardActions color">
         <Link href={`/`} className="p-18 white center">
           {obj.name}
@@ -55,7 +52,7 @@ export const CardCustom = ({ obj, type }) => {
     >
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: "#000000" }} aria-label={obj.company}>
+          <Avatar sx={{ bgcolor: "#000000" }} aria-label={obj.company} src={obj.logo}>
             {obj.company.substring(0, 1)}
           </Avatar>
         }
@@ -74,9 +71,9 @@ export const CardCustom = ({ obj, type }) => {
           </IconButton>
         }
         title={obj.company}
-        subheader={obj.validate}
+        subheader={`Válido até ${obj.validate}`}
       />
-      <Image src={imgCard} alt="Imagem do voucher"/>
+      <Image src={`/${obj.image}`} width={304} height={194} alt="Imagem do voucher" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {obj.voucher}

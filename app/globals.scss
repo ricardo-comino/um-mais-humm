@@ -7,6 +7,10 @@ body {
   padding: 0;
   box-sizing: border-box;
 
+  a {
+    text-decoration: none !important;
+  }
+
   h1 {
     font-size: 20px;
     font-weight: 400;
@@ -15,6 +19,14 @@ body {
   h2 {
     font-size: 18px;
     font-weight: 500;
+  }
+
+  p {
+    padding: 0;
+
+    &.error {
+      color: $color-error;
+    }
   }
 
   .p-12 {
@@ -33,6 +45,10 @@ body {
     font-weight: 500;
     margin: 0;
     padding: 0;
+
+    &.colorBrand {
+      color: $primary-color;
+    }
   }
 
   .p-18 {
@@ -193,6 +209,10 @@ body {
     width: 100%;
     max-width: 630px;
     margin: 0 auto;
+
+    &.bigSmall {
+      max-width: 350px;
+    }
   }
 
   .loading {
@@ -244,8 +264,22 @@ body {
     align-items: flex-start;
     flex-direction: row;
 
+    &.flexCol {
+      flex-direction: column;
+    }
+
     &.gap16 {
       gap: 16px;
+    }
+
+    &.center {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &.center2 {
+      align-items: center;
+      justify-content: center;
     }
   }
 
